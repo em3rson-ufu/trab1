@@ -12,7 +12,8 @@ def _proximo_id(vulns):
 
 
 def cadastrar_vuln(vulns, id_ativo):
-    # Cadastra uma vulnerabilidade vinculada ao ativo informado.
+    # Cadastra UMA vulnerabilidade vinculada ao ativo informado.
+    # Usada internamente por cadastrar_vuln_existente.
     print("\n--- CADASTRAR VULNERABILIDADE (Ativo #%d) ---" % id_ativo)
     id_v = _proximo_id(vulns)
 
@@ -31,6 +32,40 @@ def cadastrar_vuln(vulns, id_ativo):
     }
     salvar_vulns(vulns)
     print("  Vulnerabilidade #%d cadastrada." % id_v)
+
+
+def cadastrar_vuln_existente(ativos, vulns):
+    # Pede o ID de um ativo ja cadastrado e permite cadastrar
+    # uma ou mais vulnerabilidades associadas a ele.
+    print("\n--- CADASTRAR VULNERABILIDADE EM ATIVO ---")
+
+    # Se nao ha ativos, avisa e volta ao menu.
+    if not ativos:
+        print("  Nenhum ativo cadastrado ainda.")
+        print("  Cadastre um ativo primeiro (opcao 1 do menu).")
+        pausar()
+        return
+
+    # Pede o id do ativo.
+    id_ativo = ler_inteiro("  ID do ativo: ", 1)
+
+    # Confere se o ativo existe.
+    if id_ativo not in ativos:
+        print("  Ativo nao encontrado.")
+        pausar()
+        return
+
+    # Mostra o ativo escolhido para confirmacao.
+    print("\n  Ativo: %s" % ativos[id_ativo]["nome"])
+    print("  Setor: %s" % ativos[id_ativo]["setor"])
+
+    # Loop para cadastrar varias vulns em sequencia.
+    while True:
+        cadastrar_vuln(vulns, id_ativo)
+        if input("  Cadastrar outra? (s/n): ").lower() != "s":
+            break
+
+    pausar()
 
 
 def listar_vulns_por_ativo(ativos, vulns):

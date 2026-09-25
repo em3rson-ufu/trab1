@@ -45,14 +45,6 @@ def cadastrar_ativo(ativos, vulns):
     }
     salvar_ativos(ativos)
     print("\n  Ativo #%d cadastrado." % id_ativo)
-
-    resp = input("  Deseja cadastrar vulnerabilidades agora? (s/n): ").lower()
-    if resp == "s":
-        from vulnerabilidades import cadastrar_vuln
-        while True:
-            cadastrar_vuln(vulns, id_ativo)
-            if input("  Cadastrar outra? (s/n): ").lower() != "s":
-                break
     pausar()
 
 
