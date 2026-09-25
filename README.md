@@ -10,22 +10,27 @@ os registros (CRUD).
 
 1. Abrir o VS Code
 2. Abrir o Terminal Integrado do VS Code
-
-    Ctrl + '
-3. Escolher Onde Clonar (criar e navegar até a pasta desejada)
-
-    mkdir C:\Users\USUARIO\Pictures\trab1*
-    cd C:\Users\USUARIO\Pictures\trab1*
-    * trocar USUARIO pelo usuário atual da máquina
+```bash
+Ctrl + '
+```
+3. Escolher onde Clonar (criar e navegar até a pasta desejada)
+```bash
+mkdir C:\Users\USUARIO\Pictures\trab1
+cd C:\Users\USUARIO\Pictures\trab1
+```
+> Trocar `USUARIO` pelo usuário atual da máquina.
 4. Clonar o Repositório
-
-    git clone https://github.com/em3rson-ufu/trab1.git
+```bash
+git clone https://github.com/em3rson-ufu/trab1.git
+```
 5. Abrir o Projeto no VS Code
-
-    code .
+```bash
+code .
+```
 6. Rodar o Projeto
-
-    python main.py
+```bash
+python main.py
+```
 
 ## Estrutura
 
@@ -62,4 +67,8 @@ Cada arquivo usa `;` como separador de campos.
 
 ## Autor
 
-    Émerson André Unfried
+Émerson André Unfried
+
+## Licença
+
+Projeto desenvolvido para fins acadêmicos.
