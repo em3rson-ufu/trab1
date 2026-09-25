@@ -16,6 +16,8 @@ Ctrl + '
 3. Escolher onde Clonar (criar e navegar até a pasta desejada)
 ```bash
 mkdir C:\Users\USUARIO\Pictures\trab1
+```
+```bash
 cd C:\Users\USUARIO\Pictures\trab1
 ```
 > Trocar `USUARIO` pelo usuário atual da máquina.
