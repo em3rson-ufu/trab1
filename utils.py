@@ -1,42 +1,42 @@
-"""
-Funções auxiliares: validação de entrada, leitura segura, etc.
-Requisito 1: tratamento de erros.
-"""
+# utils.py
+# Funcoes auxiliares para leitura e validacao de entrada do usuario.
 
-
-def ler_inteiro(mensagem: str, minimo: int = None, maximo: int = None) -> int:
-    """Lê um inteiro do usuário, tratando erros e limites."""
+def ler_inteiro(mensagem, minimo=None, maximo=None):
+    # Le um inteiro e repete ate o valor ser valido.
+    # Se minimo/maximo forem informados, respeita esses limites.
     while True:
         try:
             valor = int(input(mensagem).strip())
             if minimo is not None and valor < minimo:
-                print(f"  [!] Valor deve ser >= {minimo}.")
+                print("  Valor deve ser >= %d." % minimo)
                 continue
             if maximo is not None and valor > maximo:
-                print(f"  [!] Valor deve ser <= {maximo}.")
+                print("  Valor deve ser <= %d." % maximo)
                 continue
             return valor
         except ValueError:
-            print("  [!] Entrada inválida. Digite um número inteiro.")
+            print("  Entrada invalida. Digite um numero inteiro.")
 
 
-def ler_texto(mensagem: str, obrigatorio: bool = True) -> str:
-    """Lê uma string não vazia (se obrigatório)."""
+def ler_texto(mensagem, obrigatorio=True):
+    # Le uma string. Se obrigatorio=True, rejeita campo vazio.
     while True:
         valor = input(mensagem).strip()
         if not valor and obrigatorio:
-            print("  [!] Este campo não pode ficar vazio.")
+            print("  Este campo nao pode ficar vazio.")
             continue
         return valor
 
 
-def escolher_opcao(mensagem: str, opcoes: dict) -> int:
-    """Mostra um dicionário de opções e retorna a chave escolhida."""
+def escolher_opcao(mensagem, opcoes):
+    # Mostra um menu numerado a partir do dicionario recebido
+    # e devolve a chave escolhida.
     print(mensagem)
     for chave, valor in opcoes.items():
-        print(f"  [{chave}] {valor}")
-    return ler_inteiro("  Escolha: ", minimo=min(opcoes), maximo=max(opcoes))
+        print("  [%d] %s" % (chave, valor))
+    return ler_inteiro("  Escolha: ", min(opcoes), max(opcoes))
 
 
 def pausar():
+    # Pausa para o usuario ler antes do menu voltar.
     input("\n  Pressione ENTER para continuar...")
