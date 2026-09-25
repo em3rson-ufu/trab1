@@ -8,8 +8,18 @@ os registros (CRUD).
 
 ## Como executar
 
-Precisa do Python 3.8 ou superior.
-
+1. Abrir o VS Code
+2. Abrir o Terminal Integrado do VS Code
+    Ctrl + '
+3. Escolher Onde Clonar (criar e navegar até a pasta desejada)
+    mkdir C:\Users\USUARIO\Pictures\trab1*
+    cd C:\Users\USUARIO\Pictures\trab1*
+    * trocar USUARIO pelo usuário atual da máquina
+4. Clonar o Repositório
+    git clone https://github.com/em3rson-ufu/trab1.git
+5. Abrir o Projeto no VS Code
+    code .
+6. Rodar o Projeto
     python main.py
 
 ## Estrutura
@@ -36,7 +46,7 @@ Cada arquivo usa `;` como separador de campos.
 
 1. Menu textual com tratamento de erros
 2. Pelo menos 4 categorias de ativos (tem 8)
-3. Cadastro de ativo com id unico
+3. Cadastro de ativo com id único
 4. Busca por id ou nome
 5. Atualização de ativo
 6. Remoção de ativo junto com suas vulnerabilidades
