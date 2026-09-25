@@ -1,6 +1,5 @@
 # Dados gerados em tempo de execucao
 dados/
-dados_teste/
 
 # Python
 __pycache__/

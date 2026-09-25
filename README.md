@@ -1,6 +1,6 @@
-# Sistema de Ativos de TI
+# Sistema de Ativos e Vulnerabilidades
 
-Trabalho de Ciberseguranca (UFU) - Sprints 1 e 2 - 2026/2.
+Trabalho 01 de Ciberseguranca (UFU) - Sprints 1 e 2 - 2026/2.
 
 Programa em Python para cadastrar ativos de TI e as vulnerabilidades
 associadas a eles. Permite cadastrar, consultar, atualizar e remover
@@ -8,25 +8,44 @@ os registros (CRUD).
 
 ## Como executar
 
-Precisa do Python 3.8 ou superior. Nenhuma dependencia externa.
-
-    python main.py
+1. Abrir o VS Code
+2. Abrir o Terminal Integrado do VS Code
+```bash
+Ctrl + '
+```
+3. Escolher onde Clonar (criar e navegar até a pasta desejada)
+```bash
+mkdir C:\Users\USUARIO\Pictures\trab1
+cd C:\Users\USUARIO\Pictures\trab1
+```
+> Trocar `USUARIO` pelo usuário atual da máquina.
+4. Clonar o Repositório
+```bash
+git clone https://github.com/em3rson-ufu/trab1.git
+```
+5. Abrir o Projeto no VS Code
+```bash
+code .
+```
+6. Rodar o Projeto
+```bash
+python main.py
+```
 
 ## Estrutura
 
 - main.py              menu principal
 - ativos.py            CRUD de ativos
 - vulnerabilidades.py  CRUD de vulnerabilidades
-- persistencia.py      gravacao em arquivos de texto
-- utils.py             validacao de entrada
+- persistencia.py      gravação em arquivos de texto
+- utils.py             validação de entrada
 - enums.py             constantes
-- relatorio.py         relatorio na tela
-- testes.py            testes basicos
+- relatorio.py         relatório na tela
 
 ## Arquivos de dados
 
 Os arquivos ficam na pasta `dados/`, criada automaticamente na
-primeira execucao:
+primeira execução:
 
 - `dados/ativos.txt`
 - `dados/vulnerabilidades.txt`
@@ -37,19 +56,19 @@ Cada arquivo usa `;` como separador de campos.
 
 1. Menu textual com tratamento de erros
 2. Pelo menos 4 categorias de ativos (tem 8)
-3. Cadastro de ativo com id unico
+3. Cadastro de ativo com id único
 4. Busca por id ou nome
-5. Atualizacao de ativo
-6. Remocao de ativo junto com suas vulnerabilidades
+5. Atualização de ativo
+6. Remoção de ativo junto com suas vulnerabilidades
 7. Cadastro de vulnerabilidades
-8. Visualizacao de vulnerabilidades por ativo
-9. Uso de dicionario indexado por id
+8. Visualização de vulnerabilidades por ativo
+9. Uso de dicionário indexado por id
 10. Versionamento no GitHub com branches
-
-## Testes
-
-    python testes.py
 
 ## Autor
 
-    Émerson André Unfried
+Émerson André Unfried
+
+## Licença
+
+Projeto desenvolvido para fins acadêmicos.
