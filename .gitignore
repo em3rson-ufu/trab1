@@ -1,12 +1,15 @@
+# Dados gerados em tempo de execucao
+dados/
+dados_teste/
+
+# Python
 __pycache__/
-*.py[cod]
-venv/
-.venv/
-env/
-.env
-*.egg-info/
-dist/
-build/
-.pytest_cache/
-.DS_Store
+*.pyc
+
+# Editores
 .vscode/
+.idea/
+
+# Sistema operacional
+.DS_Store
+Thumbs.db
