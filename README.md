@@ -10,16 +10,21 @@ os registros (CRUD).
 
 1. Abrir o VS Code
 2. Abrir o Terminal Integrado do VS Code
+
     Ctrl + '
 3. Escolher Onde Clonar (criar e navegar até a pasta desejada)
+
     mkdir C:\Users\USUARIO\Pictures\trab1*
     cd C:\Users\USUARIO\Pictures\trab1*
     * trocar USUARIO pelo usuário atual da máquina
 4. Clonar o Repositório
+
     git clone https://github.com/em3rson-ufu/trab1.git
 5. Abrir o Projeto no VS Code
+
     code .
 6. Rodar o Projeto
+
     python main.py
 
 ## Estrutura
