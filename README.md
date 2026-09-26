@@ -33,16 +33,25 @@ code .
 ```bash
 python main.py
 ```
-
+7. Explorar as opções do Menu
+8. Para ver o Versionamento, execute no terminal:
+```bash
+git log --oneline --graph --all
+```
 ## Estrutura
 
-- main.py              menu principal
-- ativos.py            CRUD de ativos
-- vulnerabilidades.py  CRUD de vulnerabilidades
-- persistencia.py      gravação em arquivos de texto
-- utils.py             validação de entrada
-- enums.py             constantes
-- relatorio.py         relatório na tela
+```bash
+trab1/
+├── main.py                # menu principal
+├── ativos.py              # CRUD de ativos
+├── vulnerabilidades.py    # CRUD de vulnerabilidades
+├── persistencia.py        # gravação em arquivos de texto
+├── utils.py               # validação de entrada
+├── enums.py               # constantes
+├── relatorio.py           # relatório na tela
+├── README.md
+└── .gitignore
+```
 
 ## Arquivos de dados
 
