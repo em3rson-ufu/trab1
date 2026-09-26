@@ -59,5 +59,4 @@ def main():
             print("  Opcao invalida.")
 
 
-if __name__ == "__main__":
-    main()
+main()
